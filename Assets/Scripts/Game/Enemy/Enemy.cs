@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public Transform target;
+    public int health = 100;
     public float speed = 10f;
     public float radius = 20f;
 
@@ -15,6 +16,16 @@ public class Enemy : MonoBehaviour
         if (Vector3.Distance(transform.position, target.position) < radius)
         {
             transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+            Debug.Log("Kill");
         }
     }
 }
