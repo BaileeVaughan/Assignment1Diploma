@@ -34,7 +34,7 @@ public class SpawnerScript : MonoBehaviour
     void Spawn(GameObject gO)
     {
         GameObject newObject = Instantiate(gO);
-        Vector3 randomPoint = Random.insideUnitCircle * spawnRadius;
+        Vector3 randomPoint = Random.insideUnitSphere * spawnRadius;
         newObject.transform.position = transform.position + randomPoint;
     }
 }

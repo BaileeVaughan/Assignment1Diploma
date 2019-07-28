@@ -6,14 +6,14 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 10f;
     public int damage = 20;
-    public Rigidbody2D rb;
+    public Rigidbody rb;
 
     void Start()
     {        
         rb.velocity = transform.right * speed;
     }
     
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter(Collider col)
     {
         Enemy enemy = col.GetComponent<Enemy>();        
         if (enemy != null)
