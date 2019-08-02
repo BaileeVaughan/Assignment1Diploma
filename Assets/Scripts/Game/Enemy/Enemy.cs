@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public float speed = 10f;
     public float radius = 20f;
 
+
+
     void Update()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
