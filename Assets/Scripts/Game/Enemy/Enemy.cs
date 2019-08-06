@@ -5,11 +5,11 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public Transform target;
+    public KillCount killCount;
     public int health = 100;
+    public int enemyDamage = 10;
     public float speed = 10f;
     public float radius = 20f;
-
-
 
     void Update()
     {
@@ -21,13 +21,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int bulletDamage)
     {
-        health -= damage;
+        health -= bulletDamage;
         if (health <= 0)
         {
             Destroy(gameObject);
             Debug.Log("Kill");
+            //killCount.kCount++;
         }
     }
 }
