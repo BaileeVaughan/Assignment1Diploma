@@ -92,11 +92,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  killCount: {fileID: 0}
   health: 40
   enemyDamage: 10
   speed: 5
   radius: 35
+  killValue: 1
 --- !u!65 &2809281394651835392
 BoxCollider:
   m_ObjectHideFlags: 0

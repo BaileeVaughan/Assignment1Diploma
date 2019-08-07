@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
         Vector3 moveInput = new Vector3(inputH, inputV);
         moveVelocity = moveInput.normalized * speed;
 
-        healthText.text = health.ToString();
+        healthText.text = health.ToString() + "HP";
         if (health <= 0)
         {
             health = 100;

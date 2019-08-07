@@ -28,8 +28,7 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
             Debug.Log("Kill");
-            //killCount.kCount++;
+            KillCount.killCount += killValue;
         }
-        KillCount.killCount += killValue;
     }
 }

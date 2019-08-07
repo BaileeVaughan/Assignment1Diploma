@@ -1,17 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    public TextMeshProUGUI timerText;
+    public Text timerText;
     private float startTime;
 
     void Start()
     {
-        startTime = Time.time;   // If doesnt work try Time.deltaTIme //deltaTime doesn't work
+        startTime = Time.time;
     }
     
     void Update()

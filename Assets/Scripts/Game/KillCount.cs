@@ -1,18 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
-using TMPro;
 
 public class KillCount : MonoBehaviour
 {
     public static int killCount;
+    public Text text;
 
-    public TextMeshProUGUI text;
-
-    public void Awake()
+    public void Start()
     {
-        text = GetComponent<TextMeshProUGUI>();
-
         killCount = 0;
     }
     public void Update()
