@@ -5,11 +5,11 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public Transform target;
-    public KillCount killCount;
     public int health = 100;
     public int enemyDamage = 10;
     public float speed = 10f;
     public float radius = 20f;
+    public int killValue = 1;
 
     void Update()
     {
@@ -30,5 +30,6 @@ public class Enemy : MonoBehaviour
             Debug.Log("Kill");
             //killCount.kCount++;
         }
+        KillCount.killCount += killValue;
     }
 }

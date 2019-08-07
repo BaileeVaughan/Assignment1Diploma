@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44445953, g: 0.4939447, b: 0.57325685, a: 1}
+  m_IndirectSpecularColor: {r: 0.44445908, g: 0.49394393, b: 0.5732556, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1494,8 +1494,9 @@ GameObject:
   - component: {fileID: 1659601794}
   - component: {fileID: 1659601796}
   - component: {fileID: 1659601795}
+  - component: {fileID: 1659601797}
   m_Layer: 5
-  m_Name: Kill Count
+  m_Name: KillCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1518,7 +1519,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -13, y: 117}
-  m_SizeDelta: {x: 610, y: 52.6}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1659601795
 MonoBehaviour:
@@ -1568,8 +1569,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 29.33
-  m_fontSizeBase: 29.33
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1643,6 +1644,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659601793}
   m_CullTransparentMesh: 0
+--- !u!114 &1659601797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659601793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 395edb8cefddbf74aa99bd46718edd6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1659601795}
 --- !u!1 &1668195323
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,5 +2182,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395edb8cefddbf74aa99bd46718edd6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kCountText: {fileID: 1659601795}
-  kCount: 0
+  text: {fileID: 0}

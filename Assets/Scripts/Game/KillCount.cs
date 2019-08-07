@@ -5,16 +5,18 @@ using TMPro;
 
 public class KillCount : MonoBehaviour
 {
-    public TextMeshProUGUI kCountText;
-    public int kCount = 0;
+    public static int killCount;
 
-    private void Start()
+    public TextMeshProUGUI text;
+
+    public void Awake()
     {
-        kCount = 0;
+        text = GetComponent<TextMeshProUGUI>();
+
+        killCount = 0;
     }
-
-    private void Update()
+    public void Update()
     {
-        kCountText.text = kCount.ToString() + " kills";
+        text.text = "KillCount:" + killCount;
     }
 }
