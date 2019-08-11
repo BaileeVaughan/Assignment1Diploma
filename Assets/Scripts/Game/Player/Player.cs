@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
     public Text healthText;
     private Rigidbody rigid;
     public Enemy enemy;
+    public MasterController movementJoystick;
+    public MasterController rotationJoystick;
+
 
     void Start()
     {
@@ -18,9 +21,8 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        float inputH = Input.GetAxisRaw("Horizontal");
-        float inputV = Input.GetAxisRaw("Vertical");
-        Vector3 moveInput = new Vector3(inputH, inputV);
+
+        Vector3 moveInput = new Vector3(movementJoystick.Horizontal, movementJoystick.Vertical);
         moveVelocity = moveInput.normalized * speed;
 
         healthText.text = health.ToString() + "HP";
@@ -34,6 +36,7 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         rigid.MovePosition(rigid.position + moveVelocity * Time.deltaTime);
+        this.transform.Rotate(new Vector3(0, 0, rotationJoystick.Horizontal), speed);
     }
     private void OnTriggerEnter(Collider col)
     {
