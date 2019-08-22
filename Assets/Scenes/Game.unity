@@ -2237,7 +2237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  rotSpeed: 10
+  rotSpeed: 200
   health: 100
   healthText: {fileID: 1182661290}
   enemy: {fileID: 4422246640193985667, guid: 30e5c366664b94446ac5d12479325842, type: 3}
