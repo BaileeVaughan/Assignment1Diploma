@@ -5,9 +5,9 @@ using UnityEngine;
 public class SpawnerScript : MonoBehaviour
 {
     public float spawnRadius = 5f;
+    public GameObject[] prefabs;
     public float spawnRate = 1f;
     public float spawnFactor = 0f;
-    public GameObject[] prefabs;
 
     private void OnDrawGizmos()
     {

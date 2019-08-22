@@ -4,24 +4,29 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target; //what is the camera following
-    public float smoothTime = .15f;//time to follow target
-    public float minXPos = 0, maxXPos = 0, minYPos = 0, maxYPos = 0; //min X/Y and max X/Y camera positions
-    public bool bounds; //bounds on or off
+    public Transform target;
+    public float smoothTime = .15f;
+    public float minXPos = 0, maxXPos = 0, minYPos = 0, maxYPos = 0;
+    public bool bounds;
 
-    Vector3 velocity = Vector3.zero; //resets the velocity to zero
-    
+    Vector3 velocity = Vector3.zero;
+
+    private void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
+
     private void FixedUpdate()
     {
-        Vector3 targetPosition = target.position; //target position
+        Vector3 targetPosition = target.transform.position;
 
-        if (bounds == true) //if bounds are on
+        if (bounds == true)
         {
-            targetPosition.y = Mathf.Clamp(target.position.y, minYPos, maxYPos);
-            targetPosition.x = Mathf.Clamp(target.position.x, minXPos, maxXPos);
+            targetPosition.y = Mathf.Clamp(target.transform.position.y, minYPos, maxYPos);
+            targetPosition.x = Mathf.Clamp(target.transform.position.x, minXPos, maxXPos);
         }
 
-        targetPosition.z = transform.position.z; //align the camera and the target z position
+        targetPosition.z = transform.position.z;
 
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
     }

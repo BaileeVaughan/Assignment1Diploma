@@ -8,15 +8,6 @@ public class PlayerShoot : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform shotOrigin;
-   
-    //private void Update()
-    //{
-    //    if (Input.GetButtonDown("Fire1"))
-    //    {
-    //        Shoot();
-    //        Debug.Log("Shot");
-    //    }
-    //}
 
     public void Shoot()
     {

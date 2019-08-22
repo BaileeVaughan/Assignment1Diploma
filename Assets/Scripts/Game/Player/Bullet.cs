@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public Rigidbody rb;
     public float speed = 10f;
     public int bulletDamage = 20;
-    public Rigidbody rb;
 
     void Start()
     {        

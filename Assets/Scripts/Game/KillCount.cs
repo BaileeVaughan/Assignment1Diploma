@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class KillCount : MonoBehaviour
 {
-    public static int killCount;
     public Text text;
+    public static int killCount;
 
     public void Start()
     {
@@ -14,6 +14,6 @@ public class KillCount : MonoBehaviour
     }
     public void Update()
     {
-        text.text = "KillCount:" + killCount;
+        text.text = "Kills: " + killCount;
     }
 }
