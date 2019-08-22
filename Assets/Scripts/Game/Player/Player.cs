@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed;
+    public float rotSpeed = 10f;
     public int health = 100;
     public Text healthText;
     public Enemy enemy;
@@ -25,7 +26,7 @@ public class Player : MonoBehaviour
         moveVelocity = moveInput.normalized * speed;
         healthText.text = health.ToString() + "HP";
         rigid.MovePosition(rigid.position + moveVelocity * Time.deltaTime);
-        this.transform.Rotate(new Vector3(0, 0, rotationJoystick.Horizontal), speed);
+        this.transform.Rotate(new Vector3(0, 0, rotationJoystick.Horizontal), rotSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider col)

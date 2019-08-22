@@ -10,6 +10,7 @@ public class HUDManager : MonoBehaviour
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         gameHUD.SetActive(true);
         deathHUD.SetActive(false);
     }
